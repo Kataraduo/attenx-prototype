@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AttenX - Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'attenx-blue': '#1F3B73',
+                        'attenx-orange': '#FF8C42',
+                        'attenx-gray': '#EAEAEA',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8f8f8;
+            height: 100%;
+            width: 100%;
+        }
+        .card {
+            border-radius: 16px;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: all 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .setting-item {
+            transition: all 0.2s;
+        }
+        .setting-item:hover {
+            background-color: #f5f5f5;
+        }
+        .toggle {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 28px;
+        }
+        .toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .toggle-slider {
+            background-color: #1F3B73;
+        }
+        input:checked + .toggle-slider:before {
+            transform: translateX(22px);
+        }
+    </style>
+</head>
+<body>
+    <div class="flex flex-col h-full">
+        <!-- Header -->
+        <div class="p-4 bg-white border-b">
+            <div class="flex justify-between items-center">
+                <h1 class="text-xl font-bold">Profile</h1>
+                <button class="text-gray-600 rounded-full w-8 h-8 flex items-center justify-center">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Main content -->
+        <div class="flex-1 p-4 overflow-y-auto">
+            <!-- User profile -->
+            <div class="flex flex-col items-center mb-6">
+                <div class="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center mb-3">
+                    <span class="text-attenx-blue text-2xl font-semibold">JS</span>
+                </div>
+                <h2 class="text-xl font-bold">Jamie Smith</h2>
+                <p class="text-gray-500">jamie.smith@example.com</p>
+                <button class="mt-3 text-attenx-blue text-sm font-medium">Edit Profile</button>
+            </div>
+            
+            <!-- Focus preferences -->
+            <div class="card p-4 mb-5">
+                <h2 class="font-semibold mb-4">Focus Preferences</h2>
+                
+                <div class="setting-item flex justify-between items-center p-2 rounded-lg">
+                    <div>
+                        <h3 class="font-medium">Default Focus Mode</h3>
+                        <p class="text-sm text-gray-500">Deep Work (45 min)</p>
+                    </div>
+                    <button class="text-gray-400">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="setting-item flex justify-between items-center p-2 rounded-lg">
+                    <div>
+                        <h3 class="font-medium">Break Reminders</h3>
+                        <p class="text-sm text-gray-500">Every 45 minutes</p>
+                    </div>
+                    <button class="text-gray-400">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="setting-item flex justify-between items-center p-2 rounded-lg">
+                    <div>
+                        <h3 class="font-medium">Focus Sounds</h3>
+                        <p class="text-sm text-gray-500">White noise</p>
+                    </div>
+                    <button class="text-gray-400">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="setting-item flex justify-between items-center p-2 rounded-lg">
+                    <div>
+                        <h3 class="font-medium">Daily Focus Goal</h3>
+                        <p class="text-sm text-gray-500">2 hours</p>
+                    </div>
+                    <button class="text-gray-400">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- ADHD Profile -->
+            <div class="card p-4 mb-5">
+                <h2 class="font-semibold mb-4">ADHD Profile</h2>
+                
+                <div class="mb-4">
+                    <h3 class="font-medium mb-2">Your Focus Challenges</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-attenx-blue bg-opacity-10 text-attenx-blue text-sm px-3 py-1 rounded-full">Task switching</span>
+                        <span class="bg-attenx-blue bg-opacity-10 text-attenx-blue text-sm px-3 py-1 rounded-full">Maintaining focus</span>
+                        <span class="bg-attenx-blue bg-opacity-10 text-attenx-blue text-sm px-3 py-1 rounded-full">Time blindness</span>
+                        <span class="bg-attenx-blue bg-opacity-10 text-attenx-blue text-sm px-3 py-1 rounded-full">Procrastination</span>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <h3 class="font-medium mb-2">Your Strengths</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-attenx-orange bg-opacity-10 text-attenx-orange text-sm px-3 py-1 rounded-full">Creativity</span>
+                        <span class="bg-attenx-orange bg-opacity-10 text-attenx-orange text-sm px-3 py-1 rounded-full">Hyperfocus</span>
+                        <span class="bg-attenx-orange bg-opacity-10 text-attenx-orange text-sm px-3 py-1 rounded-full">Problem solving</span>
+                    </div>
+                </div>
+                
+                <button class="w-full bg-attenx-blue bg-opacity-5 text-attenx-blue font-medium p-2 rounded-lg">
+                    Update ADHD Profile
+                </button>
+            </div>
+            
+            <!-- App settings -->
+            <div class="card p-4 mb-5">
+                <h2 class="font-semibold mb-4">App Settings</h2>
+                
+                <div class="setting-item flex justify-between items-center p-2 rounded-lg">
+                    <div>
+                        <h3 class="font-medium">Notifications</h3>
+                        <p class="text-sm text-gray-500">Focus reminders, break alerts</p>
+                    </div>
+                    <label class="toggle">
+                        <input type="checkbox" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                
+                <div class="setting-item flex justify-between items-center p-2 rounded-lg">
+                    <div>
+                        <h3 class="font-medium">Dark Mode</h3>
+                        <p class="text-sm text-gray-500">Easier on the eyes</p>
+                    </div>
+                    <label class="toggle">
+                        <input type="checkbox">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                
+                <div class="setting-item flex justify-between items-center p-2 rounded-lg">
+                    <div>
+                        <h3 class="font-medium">Data Sync</h3>
+                        <p class="text-sm text-gray-500">Sync across devices</p>
+                    </div>
+                    <label class="toggle">
+                        <input type="checkbox" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                
+                <div class="setting-item flex justify-between items-center p-2 rounded-lg">
+                    <div>
+                        <h3 class="font-medium">AI Suggestions</h3>
+                        <p class="text-sm text-gray-500">Personalized recommendations</p>
+                    </div>
+                    <label class="toggle">
+                        <input type="checkbox" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Support and feedback -->
+            <div class="space-y-3 mb-5">
+                <button class="w-full flex justify-between items-center bg-white p-4 rounded-lg">
+                    <div class="flex items-center">
+                        <i class="fas fa-question-circle text-attenx-blue mr-3"></i>
+                        <span class="font-medium">Help & Support</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </button>
+                
+                <button class="w-full flex justify-between items-center bg-white p-4 rounded-lg">
+                    <div class="flex items-center">
+                        <i class="fas fa-comment-alt text-attenx-blue mr-3"></i>
+                        <span class="font-medium">Send Feedback</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </button>
+                
+                <button class="w-full flex justify-between items-center bg-white p-4 rounded-lg">
+                    <div class="flex items-center">
+                        <i class="fas fa-star text-attenx-blue mr-3"></i>
+                        <span class="font-medium">Rate the App</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </button>
+            </div>
+            
+            <button class="w-full text-gray-500 p-3">
+                Sign Out
+            </button>
+        </div>
+    </div>
+</body>
+</html>
