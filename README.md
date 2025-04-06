@@ -13,6 +13,9 @@ This prototype includes the following HTML pages:
 - `progress.html` - Progress tracking and analytics
 - `profile.html` - User profile and settings
 
+## Live Demo
+You can access the live demo of AttenX directly at: [https://kataraduo.github.io/attenx-prototype/](https://kataraduo.github.io/attenx-prototype/)
+
 ## Local Development
 To run the prototype locally:
 
