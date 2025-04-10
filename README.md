@@ -3,7 +3,7 @@
 ## Project Overview
 AttenX is a productivity application designed specifically for individuals with ADHD. The app helps users manage their attention, focus on tasks, and improve productivity through specialized features tailored to ADHD needs.
 
-![AttenX Presentation Cover](./presentation-cover.png)
+![AttenX Presentation Cover](./presentation_cover.png)
 
 ## Presentation
 You can view or download the full presentation about AttenX:
