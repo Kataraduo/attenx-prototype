@@ -3,6 +3,12 @@
 ## Project Overview
 AttenX is a productivity application designed specifically for individuals with ADHD. The app helps users manage their attention, focus on tasks, and improve productivity through specialized features tailored to ADHD needs.
 
+![AttenX Presentation Cover](./presentation-cover.png)
+
+## Presentation
+You can view or download the full presentation about AttenX:
+- [AttenX Presentation Slides](./Zhiduo%20Xie-AttenX%20presentation.pdf)
+
 ## Prototype Contents
 This prototype includes the following HTML pages:
 - `index.html` - Main entry point and onboarding flow
@@ -13,8 +19,11 @@ This prototype includes the following HTML pages:
 - `progress.html` - Progress tracking and analytics
 - `profile.html` - User profile and settings
 
+
 ## Live Demo
 You can access the live demo of AttenX directly at: [https://kataraduo.github.io/attenx-prototype/](https://kataraduo.github.io/attenx-prototype/)
+
+
 
 ## Local Development
 To run the prototype locally:
